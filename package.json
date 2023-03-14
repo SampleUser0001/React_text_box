@@ -1,0 +1,36 @@
+{
+  "name": "react_text_box",
+  "version": "1.0.0",
+  "description": "Reactでテキストボックスを扱う。",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -fR ./dist",
+    "build": "npm run clean && mkdir ./dist && cp ./index.html ./dist/ && webpack --mode development",
+    "start": "serve ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SampleUser0001/React_text_box.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampleUser0001/React_text_box/issues"
+  },
+  "homepage": "https://github.com/SampleUser0001/React_text_box#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  }
+}
