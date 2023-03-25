@@ -1,14 +1,22 @@
 import React from "react";
+import { useInput } from "./hooks";
+import { useText } from "./TextProvider";
 
 export default function App() {
-    const onclick = () => {};
+    const [message, resetMessage] = useInput("");
+    const { addMessage } = useText();
+    const submit = e => {
+        addMessage(message);
+        resetMessage();
+    };
     return (
         <>
         <h1>Hello React Text Box.</h1>
         <div>
-            <label> Box </label>
-            <input placeholder="メッセージを入力してください。"></input>
-            <button onClick>send</button>
+            <form onSumbit={submit}>
+                <input {...message} type="text" placeholder="メッセージを入力してください。"></input>
+                <button>send</button>
+            </form>
         </div>
         <text>ここにメッセージが出力されます。</text>
         </>        
